@@ -33,7 +33,7 @@ public class RegistrationPage extends TestBase
 		
 		wb = fieldset1.findElement(accemail);
 		wb.click();
-		wb.sendKeys("shubh7@mailinator.com");
+		wb.sendKeys("shubh9@mailinator.com");
 	}
 	
 	public void enterPassword()
