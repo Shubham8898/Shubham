@@ -3,11 +3,11 @@ package tests;
 
 import org.testng.annotations.Test;
 
-import base_class.EmailBase;
+import base_class.EmailBaseClass;
 import pages.EMailHomePage;
 import pages.EMailLoginPage;
 
-public class Test_Confirmation extends EmailBase{
+public class EmailConfirmationTest extends EmailBaseClass{
 
 	@Test(priority=0)
 	public void testEmail()

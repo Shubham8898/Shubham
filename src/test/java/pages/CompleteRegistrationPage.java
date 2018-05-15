@@ -4,9 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import base_class.TestBase;
+import base_class.RegistrationBaseClass;
 
-public class CompleteRegistrationPage extends TestBase
+public class CompleteRegistrationPage extends RegistrationBaseClass
 {
 	
 	By alreadySelling = By.id("gwt-uid-669");

@@ -1,12 +1,12 @@
 package tests;
 
 import org.testng.annotations.Test;
-import base_class.TestBase;
+import base_class.RegistrationBaseClass;
 import pages.CompleteRegistrationPage;
 import pages.HomePage;
 import pages.RegistrationPage;
 
-public class Test_Registration extends TestBase {
+public class UserRegistrationTest extends RegistrationBaseClass {
 
 	
 	@Test(priority=0)

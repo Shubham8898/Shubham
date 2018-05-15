@@ -3,9 +3,9 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import base_class.EmailBase;
+import base_class.EmailBaseClass;
 
-public class EMailLoginPage extends EmailBase {
+public class EMailLoginPage extends EmailBaseClass {
 
 	By login = By.className("form-control");
 	By clickGO = By.cssSelector("div.input-group > span > button");

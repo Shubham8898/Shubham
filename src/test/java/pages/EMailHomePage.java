@@ -3,9 +3,9 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import base_class.EmailBase;
+import base_class.EmailBaseClass;
 
-public class EMailHomePage extends EmailBase{
+public class EMailHomePage extends EmailBaseClass{
 
 	By clickMail = By.className("all_message-min");
 	By confirmMail = By.xpath("td[class='button']");

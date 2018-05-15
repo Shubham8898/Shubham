@@ -4,9 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import base_class.TestBase;
+import base_class.RegistrationBaseClass;
 
-public class RegistrationPage extends TestBase
+public class RegistrationPage extends RegistrationBaseClass
 {	
 	By fullName = By.name("name");
 	By accemail = By.name("email");
