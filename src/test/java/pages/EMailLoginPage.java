@@ -3,27 +3,28 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import base_class.EmailBaseClass;
+import base_class.BaseClass;
 
-public class EMailLoginPage extends EmailBaseClass {
 
-	By login = By.className("form-control");
-	By clickGO = By.cssSelector("div.input-group > span > button");
+public class EMailLoginPage extends BaseClass {
+
+	private By login = By.className("form-control");
+	private By clickGO = By.cssSelector("div.input-group > span > button");
 	
 	public EMailLoginPage(WebDriver driver)
 	{
-		this.driver = driver;
+		this.setDriver(driver);
 	}
 	
 	public void clickOnLogin()
 	{
-		wb = driver.findElement(login);
-		wb.sendKeys("shubh9");
+		setWb(getDriver().findElement(login));
+		getWb().sendKeys("abcd");
 	}
 	
 	public void clickOnGo()
 	{
-		wb = driver.findElement(clickGO);
-		wb.click();
+		setWb(getDriver().findElement(clickGO));
+		getWb().click();
 	}
 }

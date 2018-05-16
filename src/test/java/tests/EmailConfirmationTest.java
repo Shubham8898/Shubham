@@ -3,22 +3,22 @@ package tests;
 
 import org.testng.annotations.Test;
 
-import base_class.EmailBaseClass;
+import base_class.BaseClass;
 import pages.EMailHomePage;
 import pages.EMailLoginPage;
 
-public class EmailConfirmationTest extends EmailBaseClass{
+public class EmailConfirmationTest extends BaseClass{
 
 	@Test(priority=0)
 	public void testEmail()
 	{
-		elp = new EMailLoginPage(driver);
-		elp.clickOnLogin();
-		elp.clickOnGo();
+		setObjELP(new EMailLoginPage(getDriver()));
+		getObjELP().clickOnLogin();
+		getObjELP().clickOnGo();
 		
-		ehp = new EMailHomePage(driver);
-		ehp.clickOnMail();
-		ehp.confirmTheMail();
+		setObjEHP(new EMailHomePage(getDriver()));
+		getObjEHP().clickOnMail();
+		//getEhp().confirmTheMail();
 		
 	}
 	

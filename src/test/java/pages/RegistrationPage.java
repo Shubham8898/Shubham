@@ -4,9 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import base_class.RegistrationBaseClass;
+import base_class.BaseClass;
 
-public class RegistrationPage extends RegistrationBaseClass
+public class RegistrationPage extends BaseClass
 {	
 	By fullName = By.name("name");
 	By accemail = By.name("email");
@@ -16,39 +16,39 @@ public class RegistrationPage extends RegistrationBaseClass
 
 	public RegistrationPage(WebDriver driver)
 	{
-		this.driver = driver;
+		this.setDriver(driver);
 	}
 	
 	
 	public void enterfullName()
 	{
-		wb = driver.findElement(fullName);
-		wb.sendKeys("Vijay Patil");
+		setWb(getDriver().findElement(fullName));
+		getWb().sendKeys("ABCD");
 	}
 	
 	public void enterEmail()
 	{	
-		WebElement fieldset1 = driver.findElement(By.cssSelector("form.create-form > div > div:nth-child(4) > div:nth-child(2) > div.fieldset__field-wrapper > div.field.field--large"));
+		WebElement fieldset1 = getDriver().findElement(By.cssSelector("form.create-form > div > div:nth-child(4) > div:nth-child(2) > div.fieldset__field-wrapper > div.field.field--large"));
 		fieldset1.click();
 		
-		wb = fieldset1.findElement(accemail);
-		wb.click();
-		wb.sendKeys("shubh10@mailinator.com");
+		setWb(fieldset1.findElement(accemail));
+		getWb().click();
+		getWb().sendKeys("abcd@mailinator.com");
 	}
 	
 	public void enterPassword()
 	{
-		WebElement fieldset2 = driver.findElement(By.cssSelector("form.create-form > div > div:nth-child(5) > div:nth-child(2) > div.fieldset__field-wrapper > div.field.field--large"));
+		WebElement fieldset2 = getDriver().findElement(By.cssSelector("form.create-form > div > div:nth-child(5) > div:nth-child(2) > div.fieldset__field-wrapper > div.field.field--large"));
 		fieldset2.click();
 		
-		wb = fieldset2.findElement(accpassword);
-		wb.click();
-		wb.sendKeys("123456");
+		setWb(fieldset2.findElement(accpassword));
+		getWb().click();
+		getWb().sendKeys("123456");
 	}
 	
 	public void clickRegister()
 	{
-		wb = driver.findElement(register);
-		wb.click();
+		setWb(getDriver().findElement(register));
+		getWb().click();
 	}
 }

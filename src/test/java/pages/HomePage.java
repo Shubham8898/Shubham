@@ -3,22 +3,22 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import base_class.RegistrationBaseClass;
+import base_class.BaseClass;
 
-public class HomePage extends RegistrationBaseClass
+public class HomePage extends BaseClass
 	{
 		
-	By signUpButton = By.xpath("//*[@id='header']/div/div[3]/div[1]/a");
+	private By signUpButton = By.xpath("//*[@id='header']/div/div[3]/div[1]/a");
 		
 			public HomePage(WebDriver driver)
 			{
-				this.driver = driver;
+				this.setDriver(driver);
 			}
 			
 			public void clickSignUp()
 			{
-				wb = driver.findElement(signUpButton);
-				wb.click();
+				setWb(getDriver().findElement(signUpButton));
+				getWb().click();
 
 			}
 			
